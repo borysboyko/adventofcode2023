@@ -95,5 +95,5 @@ fun main() {
         println(sum)
     }
 
-    println("Time in milliseconds: $executionTime")
+    println("\nExecution time in milliseconds: $executionTime")
 }
