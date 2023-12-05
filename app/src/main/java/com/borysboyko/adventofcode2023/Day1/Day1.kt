@@ -4,8 +4,12 @@ import java.io.File
 import kotlin.system.measureTimeMillis
 
 fun main() {
+    // Not counting reading the file into execution time.
+    val text = File("day1input.txt").readText()
+
     val executionTime = measureTimeMillis {
-        val linesOfText = File("day1input.txt").readText().split('\n')
+        val linesOfText = text.split('\n')
+
         var sum = 0
 
         for (line in linesOfText) {
@@ -16,10 +20,8 @@ fun main() {
                     break
                 } else {
                     val currentString = line.substring(i)
-                    if (currentString.startsWith("zero")) {
-                        sum += 0
-                        break
-                    } else if (currentString.startsWith("one")) {
+
+                    if (currentString.startsWith("one")) {
                         sum += 10
                         break
                     } else if (currentString.startsWith("two")) {
@@ -57,10 +59,8 @@ fun main() {
                     break
                 } else {
                     val currentString = line.substring(i)
-                    if (currentString.startsWith("zero")) {
-                        sum += 0
-                        break
-                    } else if (currentString.startsWith("one")) {
+
+                    if (currentString.startsWith("one")) {
                         sum += 1
                         break
                     } else if (currentString.startsWith("two")) {
