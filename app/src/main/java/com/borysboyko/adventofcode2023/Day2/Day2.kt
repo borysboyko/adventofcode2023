@@ -10,9 +10,9 @@ fun main() {
     val executionTime = measureTimeMillis {
         val linesOfText = text.split('\n')
 
-        var redMaxCount = 12
-        var greenMaxCount = 13
-        var blueMaxCount = 14
+        val redMaxCount = 12
+        val greenMaxCount = 13
+        val blueMaxCount = 14
 
         var totalGameSum = 0
         var badGameSum = 0
